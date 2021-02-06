@@ -1,0 +1,73 @@
+.list{
+        width: 70%;
+        height: 80px;
+        margin : 10px auto 0px auto;
+        border : 1px #eee;
+        box-shadow: 0 2px 3px  #ccc;
+        background-color: rgb(235, 235, 225);
+        position: relative;
+}
+
+.item{
+        position: relative;
+        top : 0px;
+        margin-bottom: 0mm;
+        font-size: 30px;
+}
+
+.comp{
+        position: absolute;
+        top : 51px;    
+        right: 7px; 
+        width: 22px;
+        height: 22px;
+        font-size: x-small; 
+}
+
+.edit{
+        position: absolute;
+        top: 54px;
+        right: 34px;
+        height: 22px;
+        width: 42px;
+        font-size: 18px;
+        border-width: 0px;
+        background-color: #305294;
+        color: white;
+}
+
+.edit:hover{
+        background-color: #1c3a75;
+}
+
+.completed{
+        text-align: center;
+        text-decoration: line-through;
+        background-color: rgb(168, 219, 185);
+}
+
+.editbox{
+        position: absolute;
+        left: 10px;
+        top: 56px;
+        border-top: 0mm;
+        border-right: 0mm;
+        border-left: 0mm;
+        border-color: #305294;
+        width: 150px;
+}
+
+.submit{
+        position: absolute;
+        top: 56px;
+        left: 165px;
+        height: 20px;
+        font-size: 13px;
+        border-width: 0px;
+        background-color: #305294;
+        color: white;
+}
+
+.submit:hover{
+        background-color: #1c3a75;
+}
