@@ -22,6 +22,7 @@
         width: 22px;
         height: 22px;
         font-size: x-small; 
+        outline: none;
 }
 
 .edit{
@@ -34,6 +35,7 @@
         border-width: 0px;
         background-color: #305294;
         color: white;
+        outline: none;
 }
 
 .edit:hover{
@@ -55,6 +57,7 @@
         border-left: 0mm;
         border-color: #305294;
         width: 150px;
+        outline: none;
 }
 
 .submit{
@@ -66,8 +69,13 @@
         border-width: 0px;
         background-color: #305294;
         color: white;
+        outline: none;
 }
 
 .submit:hover{
         background-color: #1c3a75;
+}
+
+.disable{
+        display: none;
 }

@@ -6,24 +6,20 @@ class App extends Component{
   state = {
       items: [],
       currentval: "",
-      edit_ind:'',
+      editval:""
   }
-  current=[
-      {currentval: "",editval:"" }
-  ]
   
   
   textChnageHandler = (event) =>{
-      this.current[0].currentval=event.target.value
+      this.setState({currentval:event.target.value})
   }
   
   
   addItemHandler = () =>{
       let temp = [...this.state.items]
-      if(this.current[0].currentval!==""){
-          temp.push({id:Math.floor(Math.random()*1000),item:this.current[0].currentval , isCompleted: false, toedit: false})
-          this.setState({items: temp})
-          this.current[0].currentval=""
+      if(this.state.currentval!==""){
+          temp.push({id:Math.random()*1000,item:this.state.currentval , isCompleted: false, toedit: false})
+          this.setState({items: temp,currentval:""})
           document.getElementById('input').value=''
       }else{
           alert('plaese add item...')
@@ -47,14 +43,14 @@ class App extends Component{
 
   
   editTextHandler=(event) =>{
-      this.current[0].editval = event.target.value;
+    this.setState({editval:event.target.value})
   }
 
 
   editItemHandler=(index)=>{
       const temp = [...this.state.items]
-      temp[index] = {id:this.state.items[index].id,item:this.current[0].editval}
-      this.setState({items: temp , show:!this.state.show})
+      temp[index] = {item:this.state.editval}
+      this.setState({items: temp})
   }
 
    
@@ -95,6 +91,5 @@ class App extends Component{
     );
   }
 }
-
 
 export default App;
